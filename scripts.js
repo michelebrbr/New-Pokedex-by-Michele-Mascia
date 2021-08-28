@@ -17,4 +17,7 @@ let pokemonList = [
 
 for(let i=0; i < pokemonList.length; i++){
   document.write(pokemonList[i].name + ' is ' + pokemonList[i].height + ' meters tall.' + '<br>');
+  if (pokemonList[i].height > 0.6){
+    document.write('The Pokemon above is quite big' + '<br>');
+  }
 }
