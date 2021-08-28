@@ -14,3 +14,7 @@ let pokemonList = [
     height: 0.5,
     types: 'water'}
 ];
+
+for(let i=0; i < pokemonList.length; i++){
+  document.write(pokemonList[i].name + ' is ' + pokemonList[i].height + ' meters tall.' + '<br>');
+}
