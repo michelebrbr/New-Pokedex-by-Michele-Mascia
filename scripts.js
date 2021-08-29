@@ -1,23 +1,25 @@
-let pokemonList = [
+let pokemonRepository = (function () {
+  let pokemonList = [
   {
-    name: 'Charmander',
-    height: 0.6,
-    types: 'fire'
+    name: 'Kurapika Diznats',
+    age: 17
   },
   {
-    name: 'Bulbasaur',
-    height: 0.7,
-    types: ['grass','poison',]
-  },
-  {
-    name: 'Squirtle',
-    height: 0.5,
-    types: 'water'}
-];
-
-for(let i=0; i < pokemonList.length; i++){
-  document.write(pokemonList[i].name + ' is ' + pokemonList[i].height + ' meters tall.' + '<br>');
-  if (pokemonList[i].height > 0.6){
-    document.write('The Pokemon above is quite big' + '<br>');
+    name: 'Leorio Piruz',
+    age: 19
   }
-}
+  ];
+
+  return {
+    add: function(pokemon) {
+      pokemonList.push(pokemon);
+    },
+    getAll: function() {
+      return pokemonList;
+    }
+  };
+})();
+
+pokemonRepository.getAll().forEach(function (pokemon) {
+  document.write(pokemon.name +'<br>');
+});
