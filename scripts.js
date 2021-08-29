@@ -1,14 +1,5 @@
 let pokemonRepository = (function () {
-  let repository = [
-  {
-    name: 'Kurapika Diznats',
-    age: 17
-  },
-  {
-    name: 'Leorio Piruz',
-    age: 19
-  }
-  ];
+  let repository = [];
 
   function showDetails(pokemon){
     console.log(pokemon);
