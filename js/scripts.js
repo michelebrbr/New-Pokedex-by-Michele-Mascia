@@ -23,7 +23,8 @@ let pokemonRepository = (function () {
     let button = document.createElement('button');
     listpokemon.classList.add('lista');
     listpokemon.classList.add('group-list-item');
-    button.innerText = pokemon.name;
+    button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+
     button.classList.add('button-class', 'btn', 'btn-primary',);
 
     button.setAttribute('data-target', '#pokemonModal');
@@ -108,7 +109,7 @@ let pokemonRepository = (function () {
     const pkName = document.querySelector('.modal-title');
     const body = document.querySelector('.modal-body');
     const pkImage = document.createElement('img');
-    pkName.innerText = pokemon.name;
+    pkName.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     body.innerHTML = '<div> Height: ' +  pokemon.height + '</div> <div> Weight: ' +  pokemon.weight + '</div>'
     pkImage.src = pokemon.imageUrl;
     body.appendChild(pkImage);
