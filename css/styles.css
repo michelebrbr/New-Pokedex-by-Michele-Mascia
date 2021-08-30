@@ -1,10 +1,19 @@
+@font-face {
+  src: url(fonts/pk-font.ttf);
+  font-family: poke;
+}
+
 .button-class{
   padding: 5px;
   margin-top: 2px;
-  background-color: #e8ebf4;
+  background-color: #D0DCED;
   color: #000000;
   border-color:inherit;
   width: 120px;
-  box-shadow: 3px 6px;
+  box-shadow: 5px 5px 2px #7799A3;
   font-family: cursive;
+}
+
+.button-class:hover{
+  background-color: #7D8CA1;
 }
