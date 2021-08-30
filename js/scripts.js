@@ -26,43 +26,18 @@ let pokemonRepository = (function () {
     button.innerText = pokemon.name;
     button.classList.add('button-class', 'btn', 'btn-primary',);
 
-    button.setAttribute('data-target', '#pokemonModal'); /*these 2 lines of code should be replaced with the commented code in lines 40 to 46*/
-    button.setAttribute('data-toggle', 'modal'); /*these 2 lines of code should be replaced with the commented code in lines 40 to 46*/
+    button.setAttribute('data-target', '#pokemonModal');
+    button.setAttribute('data-toggle', 'modal');
 
     listpokemon.appendChild(button);
     pokemonGroup.appendChild(listpokemon);
     button.addEventListener('click', function () {
       showDetails(pokemon);
-
     })
-
   }
-
-  /*function setElementAttributes(button,{
-    'data-target': '#pokemonModal',
-    'data-toggle': 'modal'
-  })
-    for (let key in attributes) {
-      element.setAttribute(key,attributes[key]);
-    }
-  }*/
-
-
-
   function showModal(item) {
     let modalContainer = document.querySelector('#modal-container');
-    /*let modal = document.createElement('div');
-    let closeElement = document.createElement('span');
-    let titleElement = document.createElement('h1');
-    let contentElement = document.createElement('p');
-    let imageElement = document.createElement('img');*/
-
-    /*let modalTitle = $('.modal-title');
-    modalTitle.innerText = $('<h1>' + pokemon.name + '</h1>');
-    modalTitle.append(nameElement);*/
-
     modalInfo(item);
-
 
     modalContainer.classList.add('is-visible');
     modal.classList.add('modal');
@@ -91,14 +66,6 @@ let pokemonRepository = (function () {
     loadDetails(pokemon);
   }
 
-  //close modal with ESC
-  window.addEventListener('keydown', (e) => {
-    let modalContainer = document.querySelector('#modal-container');
-    if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
-      hideModal();
-    }
-  });
-
   function loadList() {
     return fetch(apiUrl).then(function (response) {
       return response.json();
@@ -119,7 +86,7 @@ let pokemonRepository = (function () {
 
   function loadDetails(item) {
     let url = item.detailsUrl;
-    //console.log(item);
+
     return fetch(url).then(function (response) {
       return response.json();
     }).then(function (details) {
@@ -147,8 +114,6 @@ let pokemonRepository = (function () {
     body.appendChild(pkImage);
   }
 
-
-
   return {
     add: add,
     getAll: getAll,
@@ -161,9 +126,6 @@ let pokemonRepository = (function () {
   };
 })();
 
-
-
-//console.log(pokemonRepository.getAll());
 pokemonRepository.loadList().then(function () {
   pokemonRepository.getAll().forEach(function (pokemon) {
     pokemonRepository.addListItem(pokemon);
