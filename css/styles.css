@@ -6,8 +6,5 @@
   border-color:inherit;
   width: 120px;
   box-shadow: 3px 6px;
-}
-
-.button-class.innerText{
-  color: #000000;
+  font-family: cursive;
 }
