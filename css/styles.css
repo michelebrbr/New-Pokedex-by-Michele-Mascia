@@ -2,5 +2,12 @@
   padding: 5px;
   margin-top: 2px;
   background-color: #e8ebf4;
+  color: #000000;
   border-color:inherit;
+  width: 120px;
+  box-shadow: 3px 6px;
+}
+
+.button-class.innerText{
+  color: #000000;
 }
