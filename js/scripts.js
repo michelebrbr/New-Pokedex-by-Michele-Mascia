@@ -40,7 +40,7 @@ let pokemonRepository = (function () {
     modalInfo(item);
 
     modalContainer.classList.add('is-visible');
-    modal.classList.add('modal');
+    /*modal.classList.add('modal');
     modalContainer.appendChild(modal);
     closeElement.innerText = 'X';
     closeElement.classList.add("close")
@@ -53,7 +53,7 @@ let pokemonRepository = (function () {
     modal.appendChild(imageElement);
     modal.appendChild(contentElement);
 
-    closeElement.addEventListener('click', hideModal);
+    closeElement.addEventListener('click', hideModal);*/
     function hideModal(e) {
       let modalContainer = document.querySelector('#modal-container');
       modalContainer.classList.remove('is-visible');
