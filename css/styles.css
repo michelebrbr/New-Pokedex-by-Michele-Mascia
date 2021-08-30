@@ -5,12 +5,12 @@ body{
 .button-class{
   padding: 5px;
   margin-top: 2px;
-  background-color: #D0DCED;
+  background-color: #8ACC43;
   color: #000000;
   border-color:inherit;
   width: 120px;
-  box-shadow: 5px 5px 2px #FFC4B0;
-  font-family: cursive;
+  box-shadow: 5px 5px 2px #97CB97;
+  font-family: helvetica;
 }
 
 .button-class:hover{
@@ -20,7 +20,7 @@ body{
 .modal-body, .modal-header, .modal-footer{
   background-color:#97CB97;
   border-color: #000000;
-  border-width: 3px;
+  border-width: 0px;
 }
 
 #shiny-button{
