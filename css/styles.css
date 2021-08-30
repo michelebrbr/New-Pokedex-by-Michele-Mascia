@@ -1,7 +1,7 @@
-.modal h1{
+.modal-title h1{
   font-size: 16px;
 }
 
-.modal p{
+.modal-body p{
   font-size: 13px;
 }
