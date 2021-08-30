@@ -1,3 +1,7 @@
+body{
+  background-color: #EB4E1A;
+}
+
 .button-class{
   padding: 5px;
   margin-top: 2px;
@@ -5,7 +9,7 @@
   color: #000000;
   border-color:inherit;
   width: 120px;
-  box-shadow: 5px 5px 2px #7799A3;
+  box-shadow: 5px 5px 2px #FFC4B0;
   font-family: cursive;
 }
 
