@@ -44,6 +44,7 @@ let pokemonRepository = (function () {
     modalInfo(item);
 
     modalContainer.classList.add('is-visible');
+
     /*modal.classList.add('modal');
     modalContainer.appendChild(modal);
     closeElement.innerText = 'X';
@@ -101,6 +102,7 @@ let pokemonRepository = (function () {
       item.types = details.types;
       item.weight = details.weight;
       item.abilities = details.abilities;
+      item.id = details.id;
 
 
 
@@ -120,10 +122,15 @@ let pokemonRepository = (function () {
     const body = document.querySelector('.modal-body');
     const pkImage = document.createElement('img');
 
-    pkName.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
+    pkName.innerText = '#'+pokemon.id + ' ' + pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
     body.innerHTML = '<div> Height: ' +  pokemon.height + '</div> <div> Weight: ' +  pokemon.weight + '</div>'
     pkImage.src = pokemon.imageUrl;
     body.appendChild(pkImage);
+
+    const shinyButton = document.querySelector('#shiny-button');
+    const btnShinyFather = document.querySelector('.modal-footer');
+
+
   }
 
   function showShiny(pokemon){
