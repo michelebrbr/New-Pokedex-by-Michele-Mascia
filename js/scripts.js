@@ -132,6 +132,9 @@ let pokemonRepository = (function () {
     shinyImg.src = pokemon.imageUrlShiny;
     const body = document.querySelector('.modal-body');
     body.appendChild(shinyImg);
+    const btnShinyFather = document.querySelector('.modal-footer');
+    btnShinyFather.removeChild(shinyButton);
+
   }
 
 
