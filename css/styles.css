@@ -7,7 +7,7 @@
 .container__main {
     /* Take the remaining height */
     padding-top: 53px;
-    padding-bottom: 108px;
+    padding-bottom: 84px;
     flex-grow: 1;
     /* Layout the left sidebar, main content and right sidebar */
     display: flex;
