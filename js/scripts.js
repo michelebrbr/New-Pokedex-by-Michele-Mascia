@@ -4,7 +4,7 @@ const btnShinyFather = document.querySelector('.modal-footer');
 
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=15';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=151';
   function add(pokemon) {
     if (
       typeof pokemon === 'object' &&
