@@ -1,10 +1,13 @@
 .container {
+
     display: flex;
     flex-direction: column;
 }
 
 .container__main {
     /* Take the remaining height */
+    padding-top: 53px;
+    padding-bottom: 108px;
     flex-grow: 1;
     /* Layout the left sidebar, main content and right sidebar */
     display: flex;
@@ -13,9 +16,11 @@
 
 .container__middle {
     /* Take the remaining width */
+
     flex-grow: 1;
     display: flex;
     justify-content: center;
+
 }
 
 body{
@@ -31,8 +36,13 @@ a{
   color: #ffffff;
 }
 
+.modal{
+  margin-top: 50px;
+}
+
 .button-class{
   padding: 5px;
+
   background-color: #8ACC43;
   color: #000000;
   border-color:inherit;
