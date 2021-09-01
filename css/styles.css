@@ -31,6 +31,10 @@ body{
   background-color: #FF784F;
 }
 
+ul {
+    list-style-type: none;
+}
+
 .button-class{
   padding: 5px;
   margin-top: 2px;
