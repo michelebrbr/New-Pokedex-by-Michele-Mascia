@@ -1,4 +1,7 @@
+//let shinyToggler = true;
 const shinyButton = document.querySelector('#shiny-button');
+const btnShinyFather = document.querySelector('.modal-footer');
+
 let pokemonRepository = (function () {
   let pokemonList = [];
   let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=386';
@@ -108,8 +111,10 @@ let pokemonRepository = (function () {
 
       showModal(item);
       shinyButton.addEventListener('click',function(){
+        
 
         showShiny(item);
+
       })
 
     }).catch(function (e) {
@@ -141,6 +146,7 @@ let pokemonRepository = (function () {
     body.appendChild(shinyImg);
     const btnShinyFather = document.querySelector('.modal-footer');
     btnShinyFather.removeChild(shinyButton);
+    //shinyToggler = true;
 
   }
 
