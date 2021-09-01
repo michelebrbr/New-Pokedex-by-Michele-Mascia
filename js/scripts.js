@@ -4,7 +4,7 @@ const btnShinyFather = document.querySelector('.modal-footer');
 
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=386';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=15';
   function add(pokemon) {
     if (
       typeof pokemon === 'object' &&
@@ -111,7 +111,7 @@ let pokemonRepository = (function () {
 
       showModal(item);
       shinyButton.addEventListener('click',function(){
-        
+
 
         showShiny(item);
 
