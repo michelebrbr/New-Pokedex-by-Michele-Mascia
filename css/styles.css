@@ -1,58 +1,37 @@
 .container {
     display: flex;
     flex-direction: column;
-
 }
 
 .container__main {
     /* Take the remaining height */
     flex-grow: 1;
-
     /* Layout the left sidebar, main content and right sidebar */
     display: flex;
     flex-direction: row;
-
-}
-
-.container__left {
-    width: 100%;
-    background-color: #a40606;
-    background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
-
-    border-width: 0;
 }
 
 .container__middle {
     /* Take the remaining width */
     flex-grow: 1;
-
     display: flex;
     justify-content: center;
-
-}
-
-.container__right {
-    width: 100%;
-    background-color: #a40606;
-    background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
-
 }
 
 body{
   background-color: #a40606;
-  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
-
+  background-image: linear-gradient(315deg, #d98324 0%, #a40606 50%);
 }
 
-
-ul {
+ul{
     list-style-type: none;
+}
 
-
+a{
+  color: #ffffff;
 }
 
 .button-class{
-
   padding: 5px;
   background-color: #8ACC43;
   color: #000000;
