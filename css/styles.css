@@ -14,6 +14,7 @@
 
 .container__left {
     width: 25%;
+    background-color: #EB4E1A;
 }
 
 .container__middle {
@@ -23,10 +24,11 @@
 
 .container__right {
     width: 20%;
+    background-color: #EB4E1A;
 }
 
 body{
-  background-color: #EB4E1A;
+  background-color: #FF784F;
 }
 
 .button-class{
