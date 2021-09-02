@@ -22,6 +22,37 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+
+  function loadDetails(item) {
+    let url = item.detailsUrl;
+
+    return fetch(url).then(function (response) {
+      return response.json();
+    }).then(function (details) {
+
+      item.imageUrl = details.sprites.front_default;
+      item.imageUrlShiny = details.sprites.front_shiny;
+      item.height = details.height;
+      item.types = details.types;
+      item.weight = details.weight;
+      item.abilities = details.abilities;
+      item.id = details.id;
+
+
+
+      showModal(item);
+      shinyButton.addEventListener('click',function(){
+
+
+        showShiny(item);
+
+      })
+
+    }).catch(function (e) {
+      console.error(e);
+    });
+  }
+
   function addListItem(pokemon) {
     let pokemonGroup = document.querySelector('.list-group');
     let listpokemon = document.createElement('li');
@@ -84,7 +115,8 @@ let pokemonRepository = (function () {
           name: item.name,
           detailsUrl: item.url,
           height: item.height,
-          weight: item.weight
+          weight: item.weight,
+          id: item.id
         };
         add(pokemon);
       });
@@ -93,35 +125,7 @@ let pokemonRepository = (function () {
     })
   }
 
-  function loadDetails(item) {
-    let url = item.detailsUrl;
 
-    return fetch(url).then(function (response) {
-      return response.json();
-    }).then(function (details) {
-
-      item.imageUrl = details.sprites.front_default;
-      item.imageUrlShiny = details.sprites.front_shiny;
-      item.height = details.height;
-      item.types = details.types;
-      item.weight = details.weight;
-      item.abilities = details.abilities;
-      item.id = details.id;
-
-
-
-      showModal(item);
-      shinyButton.addEventListener('click',function(){
-
-
-        showShiny(item);
-
-      })
-
-    }).catch(function (e) {
-      console.error(e);
-    });
-  }
 
   function modalInfo(pokemon) {
     const pkName = document.querySelector('.modal-title');
