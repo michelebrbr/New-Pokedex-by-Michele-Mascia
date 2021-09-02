@@ -97,10 +97,11 @@ a{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 }
 
-.a-p-footer{
+.p-footer{
   padding-top: 15px;
   font-size: 20px;
 }
