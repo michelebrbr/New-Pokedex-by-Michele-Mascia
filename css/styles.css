@@ -106,7 +106,8 @@ a{
   padding-bottom: 4px;
 }
 
-.p-footer{
+.a-footer{
   padding-top: 15px;
+  margin-top: 15px;
   font-size: 20px;
 }
