@@ -1,4 +1,3 @@
-//let shinyToggler = true;
 const shinyButton = document.querySelector('#shiny-button');
 const btnShinyFather = document.querySelector('.modal-footer');
 
@@ -56,7 +55,6 @@ let pokemonRepository = (function () {
     let listpokemon = document.createElement('li');
     let button = document.createElement('button');
 
-    
     listpokemon.classList.add('group-list-item');
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
@@ -78,20 +76,6 @@ let pokemonRepository = (function () {
 
     modalContainer.classList.add('is-visible');
 
-    /*modal.classList.add('modal');
-    modalContainer.appendChild(modal);
-    closeElement.innerText = 'X';
-    closeElement.classList.add("close")
-    titleElement.innerText = title;
-    imageElement.setAttribute('src', img);
-
-    contentElement.innerText = 'Height:' + height;
-    modal.appendChild(closeElement);
-    modal.appendChild(titleElement);
-    modal.appendChild(imageElement);
-    modal.appendChild(contentElement);
-
-    closeElement.addEventListener('click', hideModal);*/
     function hideModal(e) {
       let modalContainer = document.querySelector('#modal-container');
       modalContainer.classList.remove('is-visible');
@@ -146,7 +130,6 @@ let pokemonRepository = (function () {
     body.appendChild(shinyImg);
     const btnShinyFather = document.querySelector('.modal-footer');
     btnShinyFather.removeChild(shinyButton);
-    //shinyToggler = true;
   }
 
   return {
