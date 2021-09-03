@@ -38,8 +38,6 @@ let pokemonRepository = (function () {
       item.abilities = details.abilities;
       item.id = details.id;
 
-
-
       showModal(item);
       shinyButton.addEventListener('click',function(){
 
@@ -58,7 +56,7 @@ let pokemonRepository = (function () {
     let listpokemon = document.createElement('li');
     let button = document.createElement('button');
 
-    listpokemon.classList.add('lista');
+    
     listpokemon.classList.add('group-list-item');
     button.innerText = pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1);
 
@@ -125,8 +123,6 @@ let pokemonRepository = (function () {
     })
   }
 
-
-
   function modalInfo(pokemon) {
     const pkName = document.querySelector('.modal-title');
     const body = document.querySelector('.modal-body');
@@ -139,7 +135,6 @@ let pokemonRepository = (function () {
 
     const shinyButton = document.querySelector('#shiny-button');
     const btnShinyFather = document.querySelector('.modal-footer');
-
 
   }
 
